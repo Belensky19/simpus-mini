@@ -301,4 +301,5 @@ Expected behavior:
 
 Note:
 These are design-level rules. Their actual enforcement
+
 requires program logic and is not provided by static HTML/CSS.
