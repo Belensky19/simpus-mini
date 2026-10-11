@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tambah Anggota - SIMPUS-Mini</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>SIMPUS-Mini</h1>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav>
+            <a href="../index.html">Dashboard</a>
+            <a href="../buku/list.html">Data Buku</a>
+            <a href="list.html">Data Anggota</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Tambah Anggota</h2>
+
+        <form action="#" method="post">
+            <label for="nama">Nama Lengkap</label>
+            <input
+                type="text"
+                id="nama"
+                name="nama"
+                placeholder="Masukkan nama lengkap"
+                required
+            >
+
+            <label for="nomor-anggota">Nomor Anggota</label>
+            <input
+                type="text"
+                id="nomor-anggota"
+                name="nomor_anggota"
+                placeholder="Masukkan nomor anggota"
+                required
+            >
+
+            <label for="alamat">Alamat</label>
+            <textarea
+                id="alamat"
+                name="alamat"
+                rows="3"
+                placeholder="Masukkan alamat"
+                required
+            ></textarea>
+
+            <label for="telepon">Nomor Telepon</label>
+            <input
+                type="tel"
+                id="telepon"
+                name="telepon"
+                placeholder="Masukkan nomor telepon"
+                required
+            >
+
+            <button type="submit">Simpan Anggota</button>
+            <a href="list.html">Batal</a>
+        </form>
+    </main>
+
+</body>
+</html>

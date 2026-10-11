@@ -1,0 +1,385 @@
+
+/* ===== General Styles ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== Header and Navigation ===== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 5%;
+    background-color: #234e70;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Hamburger Menu ===== */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    font-size: 1.6rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== Main Content ===== */
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.25rem;
+}
+
+main section {
+    margin-bottom: 2rem;
+}
+
+/* ===== Statistics Grid ===== */
+main section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.stat-card {
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+.stat-number {
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #234e70;
+}
+
+/* ===== Footer ===== */
+footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: #e3e8ed;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Tablet */
+@media (max-width: 900px) {
+    main section:nth-of-type(2) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    header {
+        position: relative;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 1rem;
+    }
+
+    .nav-toggle:checked ~ nav {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    main section:nth-of-type(2) {
+        grid-template-columns: 1fr;
+    }
+
+    form input,
+    form select {
+        max-width: 100%;
+    }
+}
+
+
+/* ===== Tables ===== */
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #234e70;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f5f8;
+}
+
+/* ===== Forms ===== */
+form {
+    max-width: 500px;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.35rem;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font: inherit;
+}
+
+form button {
+    margin-top: 1.25rem;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #234e70;
+    color: white;
+    cursor: pointer;
+    font: inherit;
+}
+
+form button:hover {
+    background-color: #183850;
+}
+
+main a {
+    color: #234e70;
+}
+
+/* Hamburger navigation */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+}
+
+.nav-toggle-label span {
+    display: block;
+    height: 3px;
+    margin: 5px 0;
+    background-color: currentColor;
+    border-radius: 2px;
+}
+
+/* Tampilan mobile */
+@media (max-width: 480px) {
+    header {
+        position: relative;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-toggle:checked ~ nav {
+        display: flex;
+    }
+}
+
+/* Responsive table */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-responsive th,
+.table-responsive td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* Responsive form */
+form {
+    width: 100%;
+    max-width: 600px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+form input,
+form select,
+form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+form button {
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    form {
+        max-width: 100%;
+    }
+
+    form input,
+    form select,
+    form textarea {
+        font-size: 16px;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+/* Layar sangat besar */
+@media (min-width: 1400px) {
+    main {
+        max-width: 1200px;
+    }
+}
+
+/* Responsive preformatted content */
+.pre-responsive {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+/* Login page */
+.login-card {
+    max-width: 420px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.login-card form {
+    max-width: 100%;
+}
+
+.login-card button {
+    width: 100%;
+    background: #1d5b8a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.login-card p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        margin: 20px auto;
+        padding: 16px;
+    }
+}

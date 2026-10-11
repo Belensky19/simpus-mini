@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tambah Buku | SIMPUS-Mini</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>SIMPUS-Mini</h1>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Dashboard</a></li>
+                <li><a href="list.html">Data Buku</a></li>
+                <li><a href="../members/list.html">Data Anggota</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Tambah Buku</h2>
+            <p>Isi formulir berikut untuk memasukkan data buku.</p>
+
+            <form action="list.html" method="get">
+                <label for="kode">Kode Buku</label>
+                <input type="text" id="kode" name="kode"
+                       placeholder="Contoh: BK004" required>
+
+                <label for="judul">Judul Buku</label>
+                <input type="text" id="judul" name="judul"
+                       placeholder="Masukkan judul buku" required>
+
+                <label for="penulis">Penulis</label>
+                <input type="text" id="penulis" name="penulis"
+                       placeholder="Masukkan nama penulis" required>
+
+                <label for="stok">Stok Buku</label>
+                <input type="number" id="stok" name="stok"
+                       min="0" placeholder="Masukkan jumlah stok" required>
+
+                <button type="submit">Simpan Buku</button>
+                <a href="list.html">Batal</a>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SIMPUS-Mini</p>
+    </footer>
+</body>
+</html>
